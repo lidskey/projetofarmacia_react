@@ -1,4 +1,5 @@
-import { Chat, HouseSimple, Users } from "@phosphor-icons/react"
+import { HouseSimple, List, Pill, PlusCircle } from "@phosphor-icons/react"
+import { Link } from "react-router-dom"
 
 function NavBar() {
     return (
@@ -7,9 +8,12 @@ function NavBar() {
             <div className="flex justify-between gap-8 py-4">
                 <p className="text-xl font-bold">Remedy Now</p>
                 <div className="flex gap-4">
-                    <button className=""><HouseSimple size={32} weight="fill" /></button>
-                    <button className=""><Chat size={32} weight="fill" /></button>
-                    <button className=""><Users size={32} weight="fill" /></button>
+                    <Link to='/' className="hover:underline"><button className="flex justify-center"><HouseSimple size={32} weight="fill" />Início</button></Link>
+                    <Link to='/produtos' className="hover:underline"><button className="flex justify-center"><Pill size={32} weight="fill" />Produtos</button></Link>
+                    <Link to='/categorias' className='hover:underline'><button className="flex justify-center"><List size={32} weight="fill" />Categorias</button></Link>
+                    <Link to='/cadastrarcategoria' className="hover:underline"><button className="flex justify-center"><PlusCircle size={32} weight="fill" />Cadastrar categoria</button></Link>
+                   
+                    
                 </div>
             </div>
 
